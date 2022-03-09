@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600&display=swap");
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  background-color: whitesmoke;
+  --accent: 113, 91%, 78%;
+  --purple: #3a19c7;
+  --radius: 3px;
+  accent-color: var(--purple);
+}
+
+*:focus-visible {
+  outline: var(--purple) auto 1px;
+}
+
+a:focus-visible {
+  outline: var(--purple) auto 1px;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.App {
+  padding: 1rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.App-header {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+nav {
+  max-width: 1100px;
+  margin-inline: auto;
+  border-radius: var(--radius);
+}
+
+.App-header nav ul {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.6rem;
+  row-gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.App-header nav li {
+  display: inline;
+  font-size: 0.9rem;
+}
+
+.App-header nav a {
+  display: block;
+  padding: 5px;
+  border-radius: var(--radius);
+  background-color: hsla(var(--accent), 0);
+  transition: background-color 0.2s ease-in-out;
+}
+.App-header nav a:hover {
+  background-color: hsla(var(--accent), 0.25);
+}
+
+.App-header nav a[aria-current="page"] {
+  background-color: hsla(var(--accent), 1);
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.offsite-link {
+  color: var(--purple);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.brand {
+  background-color: var(--purple);
+  padding: 0.25rem 0.5rem;
+}
+
+.title {
+  justify-self: center;
+  text-align: right;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+}
+
+.brand a {
+  color: white;
+}
