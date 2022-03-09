@@ -34,7 +34,7 @@ const examples = [
 ];
 
 const importExample = (name: string) =>
-  lazy(() => import(`./examples/${name}`));
+  lazy(() => import(`./examples/${name}.tsx`));
 
 function App() {
   const [example, setExample] = useState<ReactElement>(() => <>{null}</>);
