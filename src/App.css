@@ -25,7 +25,7 @@ h2 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 24px;
   margin-bottom: 4px;
 }
 
@@ -50,14 +50,14 @@ nav {
 .App-header nav ul {
   display: flex;
   justify-content: center;
-  column-gap: 0.6rem;
-  row-gap: 0.5rem;
+  column-gap: 0.25rem;
+  row-gap: 0.25rem;
   flex-wrap: wrap;
 }
 
 .App-header nav li {
   display: inline;
-  font-size: 0.9rem;
+  font-size: 13px;
 }
 
 .App-header nav a {
@@ -76,14 +76,18 @@ nav {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 36px;
   text-align: center;
 }
 
 .offsite-link {
   color: var(--purple);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 600;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .brand {
@@ -94,13 +98,14 @@ h1 {
 }
 
 .title {
+  text-align: center;
   justify-self: center;
-  text-align: right;
 }
 
 main {
   display: grid;
   gap: 1rem;
+  grid-template: auto / minmax(0, 1fr);
 }
 
 .brand a {
@@ -110,4 +115,36 @@ main {
 .sp-cube-wrapper {
   bottom: auto;
   top: var(--sp-space-2);
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 32px;
+  }
+
+  .App-header nav li {
+    font-size: 14.4px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .offsite-link {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    text-align: right;
+  }
+
+  .App-header nav ul {
+    column-gap: 0.6rem;
+    row-gap: 0.5rem;
+  }
+}
+
+.example-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

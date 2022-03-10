@@ -1,5 +1,9 @@
 # Radix Primitives Cheatsheet
 
-I love [radix primitives](https://github.com/radix-ui/primitives) but I find the documentation a bit difficult to work with. The `Anatomy` section for each component fails to present a minimal use-case because it lacks content and necessary styles, while the glossy example presented at the top of each page is too verbose to quickly see what's going on.
+> Visit this site at [https://radix-primitives-cheatsheet.tone-row.com/](https://radix-primitives-cheatsheet.tone-row.com/)
 
-This cheatsheet is intended to show at a quick glance, what is necessary to make each primitive perform its intended function.
+I love the components offered by [Radix-UI Primitives](https://github.com/radix-ui/primitives). I wanted to lower the bar to using them for myself and others by providing a quick reference for the most common use cases. This cheatsheet is intended to show the minimum content, props, and styles needed to make each primitive perform its intended function.
+
+## Contributions
+
+Contributions are welcome! Please submit a pull request or open an issue if you have any questions or suggestions.
