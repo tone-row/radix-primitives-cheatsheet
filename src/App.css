@@ -89,6 +89,8 @@ h1 {
 .brand {
   background-color: var(--purple);
   padding: 0.25rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .title {
@@ -103,4 +105,9 @@ main {
 
 .brand a {
   color: white;
+}
+
+.sp-cube-wrapper {
+  bottom: auto;
+  top: var(--sp-space-2);
 }

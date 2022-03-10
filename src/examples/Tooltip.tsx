@@ -4,13 +4,16 @@ import prettier from "prettier/standalone";
 
 const code = `import * as Tooltip from "@radix-ui/react-tooltip";
 
+const cardBackgroundColor = '#ddd';
+
+
 export default function App() {
   return (
     <Tooltip.Provider>
     <Tooltip.Root>
       <Tooltip.Trigger>A Nice Tooltip</Tooltip.Trigger>
-      <Tooltip.Content>
-        <Tooltip.Arrow />
+      <Tooltip.Content style={{backgroundColor: cardBackgroundColor}}>
+        <Tooltip.Arrow style={{fill: cardBackgroundColor}} />
         Good News!
       </Tooltip.Content>
     </Tooltip.Root>

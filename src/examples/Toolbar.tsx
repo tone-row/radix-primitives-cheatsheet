@@ -8,7 +8,7 @@ const code = `import * as Toolbar from "@radix-ui/react-toolbar";
 
 export default function App() {
   return (
-    <Toolbar.Root>
+    <Toolbar.Root style={{display: "flex"}}>
           <Toolbar.Button>Toolbar Button</Toolbar.Button>
           <Toolbar.Separator />
           <Toolbar.Link>Some Link</Toolbar.Link>

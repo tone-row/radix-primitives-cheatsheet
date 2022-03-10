@@ -18,10 +18,16 @@ export const CustomSandpack = ({
       },
     }}
     template="react"
-    files={files}
+    files={{
+      "/styles.css": `html,body,#root {
+      height: 100%;
+    } body {margin: 0;}`,
+      ...files,
+    }}
     options={{
       editorHeight: 620,
       editorWidthPercentage: 60,
+      showTabs: false,
       ...options,
     }}
     customSetup={customSetup}
