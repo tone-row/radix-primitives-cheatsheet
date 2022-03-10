@@ -18,7 +18,7 @@ ReactDOM.render(
           data-show-count="true"
           aria-label="Star tone-row/radix-primitives-cheatsheet on GitHub"
         >
-          Star
+          View on GitHub
         </a>
       </div>
       <App />
