@@ -3,30 +3,22 @@ import babel from "prettier/parser-babel";
 import prettier from "prettier/standalone";
 
 const code = `import * as Toast from "@radix-ui/react-toast";
-import {useState} from 'react';
+import { useState } from "react";
 
-function Example() {
+export default function App() {
   const [showToast, setShowToast] = useState(false);
 
   return (
-    <div>
-    <button onClick={() => setShowToast(true)}>Show Toast</button>
-        <Toast.Root open={showToast} onOpenChange={setShowToast}>
-          <Toast.Title>Title</Toast.Title>
-          <Toast.Description>Description</Toast.Description>
-          <Toast.Action altText="This is the meaning of this toast" />
-          <Toast.Close>Close</Toast.Close>
-        </Toast.Root>
-    </div>
-  );
-}
-
-export default function App() {
-  return (
     <Toast.Provider swipeDirection="right">
-    <Example />
-<Toast.Viewport />
-</Toast.Provider>
+      <button onClick={() => setShowToast(true)}>Show 5 Second Toast</button>
+      <Toast.Root open={showToast} onOpenChange={setShowToast}>
+        <Toast.Title>Toast Title</Toast.Title>
+        <Toast.Description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod saepe porro eius harum, rem eos voluptatem? Labore ipsum sed cumque fuga, veniam perferendis quo accusamus esse ab illo sint reiciendis!</Toast.Description>
+        <Toast.Action>Action</Toast.Action>
+        <Toast.Close>Close</Toast.Close>
+      </Toast.Root>
+      <Toast.Viewport style={{ position: "fixed", bottom: 20, right: 20 }} />
+    </Toast.Provider>
   );
 }
 `;
@@ -40,7 +32,7 @@ const Example = () => (
       }),
     }}
     options={{
-      editorHeight: 620,
+      editorHeight: 480,
       editorWidthPercentage: 60,
     }}
     customSetup={{

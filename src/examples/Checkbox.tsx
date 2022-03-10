@@ -24,7 +24,7 @@ const Example = () => (
       }),
     }}
     options={{
-      editorHeight: 400,
+      editorHeight: 350,
       editorWidthPercentage: 60,
     }}
     customSetup={{
