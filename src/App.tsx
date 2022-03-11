@@ -2,16 +2,7 @@ import "./App.css";
 import "@codesandbox/sandpack-react/dist/index.css";
 
 import { NavLink, useLocation } from "react-router-dom";
-import {
-  ReactElement,
-  ReactNode,
-  Suspense,
-  lazy,
-  useEffect,
-  useState,
-} from "react";
-
-import ReactDOM from "react-dom";
+import { ReactElement, Suspense, lazy, useEffect, useState } from "react";
 
 const examples = [
   "Accordion",
@@ -96,30 +87,8 @@ function App() {
         </div>
         <Suspense fallback={<div>Loading...</div>}>{example}</Suspense>
       </main>
-      <Head>
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${
-            import.meta.env.VITE_GOOGLE_ANALYTICS_ID
-          }`}
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '${import.meta.env.VITE_GOOGLE_ANALYTICS_ID}');`,
-          }}
-        />
-      </Head>
     </div>
   );
 }
 
 export default App;
-
-function Head({ children }: { children: ReactNode }) {
-  if (!document.head) return null;
-  return ReactDOM.createPortal(children, document.head);
-}
